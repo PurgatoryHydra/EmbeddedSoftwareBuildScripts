@@ -1,0 +1,9 @@
+PV=6.0
+./configure --prefix=/home/duke/cross_compile/build/ncurses-$(PV)  --host=arm-linux CC=arm-linux-gcc --without-cxx --without-cxx-binding --without-ada --without-manpages --without-progs --with-tests --with-shared
+make
+make install
+
+# 	to be done with bitbake	#
+#copy lib to $(ROOTFS)/lib/ncurses, and share to $(ROOTFS)/usr/share. 
+#echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib/ncurses"
+#echo "export TERMINFO=/usr/share/terminfo" > $(ROOTFS)/etc/profile

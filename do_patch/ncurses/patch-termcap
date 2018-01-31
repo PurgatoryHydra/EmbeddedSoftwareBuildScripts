@@ -1,0 +1,11 @@
+--- termcap.h	2018-01-31 13:03:39.433850482 +0800
++++ termcap.h.diff	2018-01-31 13:04:31.746863289 +0800
+@@ -39,7 +39,7 @@
+ #undef  NCURSES_VERSION
+ #define NCURSES_VERSION "6.0"
+ 
+-#include <ncurses/ncurses_dll.h>
++#include <ncurses_dll.h>
+ 
+ #ifdef __cplusplus
+ extern "C"

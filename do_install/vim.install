@@ -1,0 +1,12 @@
+./configure --with-tlib=ncurses --with-features=tiny --disable-gui --without-x --disable-selinux --disable-acl --disable-gpm --prefix=/home/duke/cross_compile/build/vim-8.0 CPPFLAGS=-I/home/duke/cross_compile/build/ncurses-6.0/include/ncurses LDFLAGS=-L/home/duke/cross_compile/build/ncurses-6.0/lib
+make CC=$(CROSS_COMPILER)gcc
+make install STRIP=$(CROSS_COMPILER)strip
+
+##  issue  ##
+path to ncurses should be convey with something like $(INC_NCURSES) and $(LIB_NCURSES), maybe I should checkout the code of Yocto Project for more. 
+
+## bitbake job ##
+patch the ncurses first before compile vim. 
+
+cp shared/vim to /usr/shared.
+/bin/vim to $(ROOTFS)/usr/bin
